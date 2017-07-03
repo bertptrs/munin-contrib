@@ -106,7 +106,7 @@ smiOutput=`$nvSmiExec -q`
 if [ "$1" = "config" ]; then
 
 	# Get driver version
-	driverVersion=`nvidia-smi -q | grep "Driver Version" | cut -d : -f 2 | tr -d ' '`
+	driverVersion=`$nvSmiExec -q | grep "Driver Version" | cut -d : -f 2 | tr -d ' '`
 
 	# Configure graph depending on what which quantity will be plotted
 	case $name in
